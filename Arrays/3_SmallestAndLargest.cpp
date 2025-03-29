@@ -11,16 +11,13 @@ int main(){
     int size = 10;
     int arr[size];
     for(int i = 0; i < size; i++){
-        cout<<"Enter the element at the index: "<<i<<" : ";
+        cout<<"Enter the element at the index: "<<i+1<<" : ";
         cin>>arr[i];
     }
 
     //finding smallest and largest
     for(int i = 0; i < size; i++){
-        if(arr[i] > maxx){
-            // max = arr[i];
-            maxx = max(arr[i], maxx);
-        }
+        maxx = max(arr[i], maxx);
 
         if(arr[i] < min){
             min = arr[i];
