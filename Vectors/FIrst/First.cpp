@@ -12,5 +12,10 @@ int main(){
         cout<<vec[i]<<endl;
     }
 
+    cout<<"For Each Loop"<<endl;
+    for(int i: vec){
+        cout<<i<<endl;
+    }
+
     return 0;
 }
