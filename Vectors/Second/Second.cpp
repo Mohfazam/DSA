@@ -18,6 +18,12 @@ int main(){
         cout<<i<<endl;
     }
 
+    vec.pop_back();
+    cout<<"Popper Element to the back"<<endl;
+    for(int i : vec){
+        cout<<i<<endl;
+    }
+
 
     return 0;
 }
