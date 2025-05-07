@@ -14,7 +14,7 @@ int main(){
     }
     vec.push_back(6);
     cout<<"Added Element to the back"<<endl;
-    for(int i : vec){
+    for(int i : vec){ 
         cout<<i<<endl;
     }
 
@@ -24,6 +24,8 @@ int main(){
         cout<<i<<endl;
     }
 
+    cout<<"Printing Value from the front: "<<vec.front()<<endl;
+    cout<<"Printing from an specific index: "<<vec.at(1);
 
     return 0;
 }
