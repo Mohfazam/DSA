@@ -2,6 +2,25 @@
 
 using namespace std;
 
+int binarySearch(int arr[], int target, int low, int high){
+    int mid = low + (high - low) / 2;
+
+    if(arr[mid] < target){
+        binarySearch(arr,target, mid+1, high);
+    }
+
+    if(arr[mid] > target){
+        binarySearch(arr,target, low, mid-1);
+    }
+
+    if(arr[mid] == target){
+        return mid;
+    }
+
+    return -1;
+
+}
+
 int main(){
     int target;
     int n;
@@ -28,27 +47,29 @@ int main(){
 
     //Binary Search
 
-    int index;
+    // int index;
 
     int low = 0;
     int high = n-1;
 
-    while(low <= high){
-        int mid = low + (high - low) /2;
+    // while(low <= high){
+    //     int mid = low + (high - low) /2;
 
-        if(arr[mid] > target){
-            high = mid - 1;
-        }
+    //     if(arr[mid] > target){
+    //         high = mid - 1;
+    //     }
 
-        if(arr[mid] < target){
-            low = mid + 1;
-        }
+    //     if(arr[mid] < target){
+    //         low = mid + 1;
+    //     }
 
-        if(arr[mid] == target){
-            index = mid;
-            break;
-        }
-    }
+    //     if(arr[mid] == target){
+    //         index = mid;
+    //         break;
+    //     }
+    // }
+
+    int index = binarySearch(arr, target, low, high);
 
     cout<<"The target value is at the index: "<<index<<endl;
 
