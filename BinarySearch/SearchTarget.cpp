@@ -5,10 +5,12 @@ using namespace std;
 int main(){
     int target;
     int n;
-    int arr[n];
+    
 
     cout<<"Enter the Size of the array: ";
     cin>>n;
+
+    int arr[n];
 
     cout<<"Enter the Target Value: ";
     cin>>target;
@@ -20,9 +22,35 @@ int main(){
 
     cout<<"Array elements "<<endl;
     for(int i = 0; i < n; i++){
-        cout<<"Value: "<<i<<arr[i]<<endl;
+        cout<<"Value: "<<arr[i]<<endl;
         
     }
+
+    //Binary Search
+
+    int index;
+
+    int low = 0;
+    int high = n-1;
+
+    while(low <= high){
+        int mid = (low+high)/2;
+
+        if(arr[mid] > target){
+            low = mid + 1;
+        }
+
+        if(arr[mid] < target){
+            high = mid - 1;
+        }
+
+        if(arr[mid] == target){
+            index = mid;
+            break;
+        }
+    }
+
+    cout<<"The target value is at the index: "<<index<<endl;
 
     return 0;
 
