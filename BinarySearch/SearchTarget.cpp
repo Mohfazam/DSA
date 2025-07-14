@@ -34,14 +34,14 @@ int main(){
     int high = n-1;
 
     while(low <= high){
-        int mid = (low+high)/2;
+        int mid = low + (high - low) /2;
 
         if(arr[mid] > target){
-            low = mid + 1;
+            high = mid - 1;
         }
 
         if(arr[mid] < target){
-            high = mid - 1;
+            low = mid + 1;
         }
 
         if(arr[mid] == target){
