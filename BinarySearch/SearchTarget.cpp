@@ -3,14 +3,17 @@
 using namespace std;
 
 int binarySearch(int arr[], int target, int low, int high){
+
+    if(low > high) return -1;
+
     int mid = low + (high - low) / 2;
 
     if(arr[mid] < target){
-        binarySearch(arr,target, mid+1, high);
+        return binarySearch(arr,target, mid+1, high);
     }
 
     if(arr[mid] > target){
-        binarySearch(arr,target, low, mid-1);
+        return binarySearch(arr,target, low, mid-1);
     }
 
     if(arr[mid] == target){
