@@ -4,7 +4,7 @@ using namespace std;
 
 int binarySearch(int arr[], int target, int low, int high){
 
-    if(low > high) return -1;
+    if(low <= high){ 
 
     int mid = low + (high - low) / 2;
 
@@ -19,6 +19,7 @@ int binarySearch(int arr[], int target, int low, int high){
     if(arr[mid] == target){
         return mid;
     }
+}
 
     return -1;
 
