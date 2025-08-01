@@ -4,12 +4,12 @@
 using namespace std;
 
 int main(){
-    vector<int> nums = {15, 16, 18, 5};
+    vector<int> nums = {15, 16, 18, 55};
 
     int n = nums.size();
 
     for(int i = 0; i < n-1; i++){
-        for(int j = 0; j < n-1; j++){
+        for(int j = 0; j < n-i-1; j++){
             if(nums[j] < nums[j+1]){
                 swap(nums[j], nums[j+1]);
             }
