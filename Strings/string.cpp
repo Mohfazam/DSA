@@ -3,9 +3,9 @@
 using namespace std;
 
 int main(){
-    char str[100];
+    string str;
 
-    cin.getline(str, 100, '+');
+    getline(cin, str);
 
     cout<<str;
 
