@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 
 int main(){
@@ -14,18 +13,18 @@ int main(){
         }
     }
 
-    int maxRowSum = 0;
+    int maxColSum = 0;
 
     for(int row = 0; row < 3; row++){
-        int rowSum = 0;
+        int colSum = 0;
         for(int col = 0; col < 3; col++){
-            rowSum += arr[row][col];
+            colSum += arr[col][row];
         }
 
-        maxRowSum = max(maxRowSum, rowSum);
+        maxColSum = max(maxColSum, colSum);
     }
 
-    cout<<"The Maximum Row Sum is : "<<maxRowSum;
+    cout<<"The Maximum Column Sum is : "<<maxColSum;
 
     return 0;
 }
