@@ -15,13 +15,22 @@ int main(){
         }
     }
 
-    int sum = 0;
+    int primarySum = 0;
 
     for(int row = 0; row < 3; row++){
-        sum += arr[row][row];
+        primarySum += arr[row][row];
     }
 
-    cout<<"The Diagonal Sum is : "<<sum;
+    
+
+    int secondarySum = 0;
+
+    for(int row = 0; row < 3; row++){
+        secondarySum += arr[row][3-1-row];
+    }
+
+    cout<<"The Primary Diagonal Sum is : "<<primarySum<<endl;
+    cout<<"The Secondary Diagonal Sum is : "<<secondarySum;
 
 
     return 0;
