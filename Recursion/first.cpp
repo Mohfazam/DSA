@@ -8,9 +8,9 @@ void name(int n, string value){
         return;
     }
 
-    cout<<value<<endl;;
-
+    
     name(n-1, value);
+    cout<<value<<": "<<n<<endl;
 
 }
 
