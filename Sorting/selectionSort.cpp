@@ -6,7 +6,7 @@ int main(){
 
     int arr[] = {13, 46, 24, 52, 20, 9};
     
-    //Insertion sorting
+    //Selection sorting
 
     for(int i = 0; i < 6; i++){
         int min_index = i;
