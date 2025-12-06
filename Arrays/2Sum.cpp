@@ -43,10 +43,10 @@ vector<int> twoSum(vector<int>& nums, int target) {
 
         for(int i = 0; i < nums.size(); i++){
             int a = nums[i];
-            int more = target - a;
+            int b = target - a;
 
-            if(ans.find(more) != ans.end()){
-                return {ans[more], i};
+            if(ans.find(b) != ans.end()){
+                return {ans[b], i};
             }
 
             ans[a] = i;
@@ -58,7 +58,7 @@ vector<int> twoSum(vector<int>& nums, int target) {
 int main(){
     vector<int> nums = {2,7,11,15}; 
     int target = 9;
-    vector<int> ans = twoSumbWithoutMap(nums, target);
+    vector<int> ans = twoSum(nums, target);
     cout << "[" << ans[0] << ", " << ans[1] << "]";
     return 0;
 }
