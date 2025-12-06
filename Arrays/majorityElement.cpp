@@ -43,9 +43,33 @@ int majorityElement(vector<int>& nums) {
         return answer;
     }
 
+
+    //Optimal Solution - Boyer Moore Algorithm
+    int majorityElementMooreAlgorithm(vector<int>& nums) {
+        int count = 0;
+        int ele = 0;
+
+        for(int i = 0; i < nums.size(); i++){
+
+            if(count == 0){
+                ele = nums[i];
+            }
+            if(nums[i] == ele){
+                count++;
+            }
+
+            else{
+            count--;
+            }
+                
+        }
+
+        return ele;
+    }
+
 int main(){
     vector<int> nums = {2,2,1,1,1,2,2}; 
-    int ans = majorityElementWithHashing(nums);
+    int ans = majorityElementMooreAlgorithm(nums);
     cout<<"The Majority element is : "<<ans;
     return 0;
 }
