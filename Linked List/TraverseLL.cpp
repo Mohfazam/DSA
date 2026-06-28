@@ -24,9 +24,6 @@ int main(){
         Node *temp = new Node(nums[i]);
         tail->next = temp;
         tail = temp;
-
-        
-        
     }
 
     Node *temp = head;
