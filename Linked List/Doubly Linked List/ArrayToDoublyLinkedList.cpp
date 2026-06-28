@@ -21,12 +21,16 @@ int main(){
 
     Node *head = new Node(nums[0]);
 
-    Node *tail = head->next;
-    Node *rear = head->back;
+    Node *tail = head;
 
     for(int i = 1; i < nums.size(); i++){
-        
+        Node *temp = new Node(nums[i]);
+        tail->next = temp;
+        temp->back = tail;
+        tail = temp;
     }
+
+    
 
 
     return 0;
